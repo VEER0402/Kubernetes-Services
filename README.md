@@ -165,3 +165,44 @@ Type	Abstraction	Real infrastructure
 Example	type: LoadBalancer	ELB / ALB / NLB
 
 👉 Kubernetes does not replace AWS Load Balancer — it uses it.
+
+
+
+
+=========================================================================
+
+🗄️ Database & Kubernetes (Important Clarity)
+
+RDS is an AWS service, not a Kubernetes component
+
+In most real-world projects:
+
+Applications run in Kubernetes
+
+Database runs on AWS RDS (managed)
+
+Why DB is usually outside Kubernetes:
+
+Better backups
+
+High availability
+
+Stability
+
+Less risk of data loss
+
+Key Rule:
+
+Database should never be publicly exposed
+
+Whether DB is:
+
+Inside Kubernetes → use ClusterIP
+
+On AWS RDS → private subnet, no public access
+
+================================================================================================
+
+🏢 Real-World Microservices Mapping
+
+Typical production setup:
