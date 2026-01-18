@@ -206,3 +206,16 @@ On AWS RDS → private subnet, no public access
 🏢 Real-World Microservices Mapping
 
 Typical production setup:
+
+
+
+<img width="1024" height="1024" alt="k8" src="https://github.com/user-attachments/assets/6d28c89b-540a-4d78-93f5-21285e1d5dac" />
+
+
+
+
+
+
+
+👉 Only the entry point is public.
+👉 Internal services and database remain private.
